@@ -5,20 +5,15 @@
  */
 package Leche;
 
+import Postres.Postre;
+
 /**
  *
  * @author Pedro Mendoza
  */
 public class LecheDescremada extends LecheEntera {
     
-    @Override
-    public void usarHelado() {
-        System.out.println("Usando leche descremada");
-    }
-
-    @Override
-    public void usarPastel() {
-        System.out.println("Usando leche descremada");
-    }
-    
+    public void usarPostre(Postre postre) {
+		System.out.println("Usando leche descremada");
+	}
 }
