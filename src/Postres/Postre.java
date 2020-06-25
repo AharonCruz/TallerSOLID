@@ -40,6 +40,9 @@ public class Postre {
 	public ArrayList<Aderezo> getAderezos() {
 		return aderezos;
 	}
+	public double getPrecioParcial(){
+		return precioParcial;
+	}
 
 
 	public String showPrecioFinal() {
