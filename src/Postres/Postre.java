@@ -13,30 +13,15 @@ public class Postre {
 		aderezos = new ArrayList<>();
 		this.sabor = sabor;
 	}
-
-	public double calcularPrecioFinal() {
-		double precioFinal;
-		precioFinal = (precioParcial + (precioParcial * 0.12)) + (aderezos.size() * 0.50);
-		return precioFinal;
-	}
 	
-	
-	public  void anadirAderezoHelado(Aderezo aderezo){
+	public  void addAderezo(Aderezo aderezo){
         this.getAderezos().add(aderezo);
     }
     
-    public  void quitarAderezoHelado(Aderezo aderezo){
+    public  void quitarAderezo(Aderezo aderezo){
         this.getAderezos().remove(aderezo);
     }
     
-    public  void anadirAderezoPastel(Aderezo aderezo){
-        this.getAderezos().add(aderezo);
-    }
-    
-    public void quitarAderezoPastel(Aderezo aderezo){
-        this.getAderezos().remove(aderezo);
-    }
-
 	public ArrayList<Aderezo> getAderezos() {
 		return aderezos;
 	}
@@ -44,10 +29,4 @@ public class Postre {
 		return precioParcial;
 	}
 
-
-	public String showPrecioFinal() {
-		return "Precio Final: $ " + calcularPrecioFinal();
-	}
-	
-	
 }

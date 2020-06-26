@@ -7,16 +7,10 @@ package Adicionales;
 
 /**
  *
- * @author Pedro Mendoza
+ * @author Daniela
  */
-public abstract class Aderezo {
-   protected String nombre;
-
-    public abstract void setNombre(String nombre);  
-
+public class Frutilla extends Aderezo {
     @Override
-    public String toString(){
-            return  nombre.toUpperCase();
-     }
-    
+    public void setNombre(String nombreAderezo){this.nombre=nombreAderezo;
+    };
 }

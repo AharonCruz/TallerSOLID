@@ -7,6 +7,8 @@ package Principal;
 import java.util.ArrayList;
 
 import Adicionales.Aderezo;
+import Adicionales.Crema;
+import Adicionales.Frutilla;
 import Postres.*;
 import Procesos.*;
 import Leche.*;
@@ -28,13 +30,19 @@ public class Sistema {
         // Producir Pastel
         Postre pastel_chocolate = new Pastel("Chocolate");
         arrPostres.add(pastel_chocolate);
-        
+        Aderezo frutilla = new Frutilla();
+        Aderezo crema = new Crema();
+        Aderezo malva = new Crema();
+        malva.setNombre("Malvavisco");
+        frutilla.setNombre("Frutilla");
+        crema.setNombre("Crema");
         arrPostres.forEach(postre -> {
-            //postre.addAderezos(new Crema());
-            //postre.addAderezos(new Frutilla());
+            postre.addAderezo(malva);
+            postre.addAderezo(crema);
+            postre.addAderezo(frutilla);
             System.out.println(postre);
             mnj_leche.cambiarTipoLeche(postre);
-            //System.out.println(ManejadorDePrecio.showPrecioFinal(postre));
+            System.out.println(ManejadorDePrecio.showPrecioFinal(postre));
         });        
             
     }
